@@ -48,7 +48,7 @@ export default function TodoContainer() {
         <button onClick={handleClick} className='px-6 py-1 rounded-lg shadow-md border border-green-500 hover:text-white hover:bg-green-400'>Add</button>
         </div>
 
-    <div style={{height:'300px'}} className='no-scrollbar overflow-y-scroll'>
+    <div style={{height:'400px'}} className='no-scrollbar overflow-y-scroll'>
 {todos.map((todo,i)=>{
     return <div key={i} className='rounded p-3 border cursor-pointer border-purple-200 bg-gray-100'>
         <h1 className='capitalize text-lg flex text-purple-800 font-medium justify-between '>{todo.content}
