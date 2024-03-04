@@ -74,10 +74,10 @@ export default function TodoContainer() {
 
   return (
     <div className='p-5  bg-[url("/images/bg2.jpg")] min-h-screen'>
-
-    <div  className="rounded-md shadow-xl lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-4 p-2 mt-10 border  font-[popins]  ">
-
         <h1 className='font-semibold text-3xl sticky top-0 text-center text-black font-mono '><span className='underline'>TO</span> <span className='underline'>DO</span>  LIST</h1>
+
+    <div  className="rounded-md shadow-xl lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-4 p-3 mt-7 border  font-[popins]  ">
+
         <div className='space-y-2 p-2'>
         <input  value={task.content} onChange={handleChange} className='border-b-2 rounded-lg shadow-sm w-full p-4 focus:outline-none' type="text" placeholder='what would you like to add? ' name="content" id="" />
         <input hidden value={task.status} className='' onChange={handleChange}  type="text" name="status" id="" />
@@ -87,7 +87,7 @@ export default function TodoContainer() {
        {editing ?<button onClick={cancelEdit} className='px-9 py-2 rounded-lg shadow-md border border-red-500 hover:text-white ml-2 hover:bg-red-400'> Cancel</button>:null } 
         </div>
 
-    <div style={{height:'600px'}} className='no-scrollbar space-y-1.5 overflow-y-scroll'>
+    <div style={{height:'500px'}} className='no-scrollbar space-y-1.5 overflow-y-scroll'>
 {todos.map((todo,i)=>{
     return <div key={i} className='rounded-lg p-3 border shadow-xl cursor-pointer border-purple-200 bg-gray-100'>
       <h1 className=' text-lg flex text-purple-800 font-medium justify-between '>{todo.content}
