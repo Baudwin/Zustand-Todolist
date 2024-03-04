@@ -37,7 +37,7 @@ export default function TodoContainer() {
   return (
     <div className='p-5'>
 
-    <div className="rounded-md shadow-lg lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] overflow-y-auto">
+    <div className="rounded-md shadow-lg lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] h-96 overflow-y-hidden">
 
         <h1 className='font-semibold text-2xl  text-center text-purple-400'>TODO List</h1>
         <div className='space-y-2 p-2'>
@@ -45,7 +45,7 @@ export default function TodoContainer() {
         <input hidden value={task.status} className='' onChange={handleChange}  type="text" name="status" id="" />
         <input hidden value={task.date} className='' onChange={handleChange}  type="text" name="date" id="" />
 
-        <button onClick={handleClick} className='px-6 py-0.5 rounded-lg shadow-md border border-green-500 hover:text-white hover:bg-green-400'>Add</button>
+        <button onClick={handleClick} className='px-6 py-1 rounded-lg shadow-md border border-green-500 hover:text-white hover:bg-green-400'>Add</button>
         </div>
 
 
