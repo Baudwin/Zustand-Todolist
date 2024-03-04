@@ -35,9 +35,9 @@ export default function TodoContainer() {
     }
 
   return (
-    <>
+    <div className='p-5'>
 
-    <div className="rounded-md shadow-lg w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] overflow-y-auto">
+    <div className="rounded-md shadow-lg lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] overflow-y-auto">
 
         <h1 className='font-semibold text-2xl  text-center text-purple-400'>TODO List</h1>
         <div className='space-y-2 p-2'>
@@ -73,6 +73,6 @@ export default function TodoContainer() {
 
 
 
-    </>
+    </div>
   )
 }

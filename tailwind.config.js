@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens:{
+        '2xl':'1536px',
+        'xl':'1280px',
+        'lg':'1024px',
+        'md':'767px',
+        'sm':'390px',
+        'xsm':'360px',
+        'xxsm':'320px',
+        'sm':'400px',
+        
+      },
+    },
   },
   plugins: [],
 }
