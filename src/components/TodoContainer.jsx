@@ -37,9 +37,9 @@ export default function TodoContainer() {
   return (
     <div className='p-5'>
 
-    <div className="rounded-md shadow-lg lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] h-96 overflow-y-hidden">
+    <div  className="rounded-md shadow-lg lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-1 p-2 mt-10 border border-purple-300 font-[popins] ">
 
-        <h1 className='font-semibold text-2xl  text-center text-purple-400'>TODO List</h1>
+        <h1 className='font-semibold text-2xl sticky top-0 text-center text-purple-400'>TODO List</h1>
         <div className='space-y-2 p-2'>
         <input  value={task.content} onChange={handleChange} className='border-b-2 w-full p-2 focus:outline-none' type="text" placeholder='what would you like to add? ' name="content" id="" />
         <input hidden value={task.status} className='' onChange={handleChange}  type="text" name="status" id="" />
@@ -48,7 +48,7 @@ export default function TodoContainer() {
         <button onClick={handleClick} className='px-6 py-1 rounded-lg shadow-md border border-green-500 hover:text-white hover:bg-green-400'>Add</button>
         </div>
 
-
+    <div style={{height:'300px'}} className='no-scrollbar overflow-y-scroll'>
 {todos.map((todo,i)=>{
     return <div key={i} className='rounded p-3 border cursor-pointer border-purple-200 bg-gray-100'>
         <h1 className='capitalize text-lg flex text-purple-800 font-medium justify-between '>{todo.content}
@@ -67,6 +67,8 @@ export default function TodoContainer() {
         {/* <p className='text-gray-600 text-md capitalize'>{todo.status}</p> */}
         </div>
 })}
+
+</div>
 
     </div>
 
