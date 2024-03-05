@@ -4,7 +4,7 @@ import { create } from "zustand";
 export const useTodoStore = create((set, get)=>({
     tasks : JSON.parse(localStorage.getItem('tasks')) || [],
     addTask : (newTask)=>{
-        const updatedTasks = [...get().tasks, newTask].slice(0).reverse()
+        const updatedTasks = [...get().tasks, newTask]
         
         localStorage.setItem('tasks', JSON.stringify(updatedTasks))
         set({tasks: updatedTasks})

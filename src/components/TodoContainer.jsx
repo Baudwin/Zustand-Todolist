@@ -73,7 +73,7 @@ export default function TodoContainer() {
     }
 
   return (
-    <div className='p-5  bg-[url("/images/bg2.jpg")] min-h-screen'>
+    <div className='p-5  bg-[url("/images/bg2.jpg")] min-h-screen bg-center bg-no-repeat bg-cover'>
         <h1 className='font-semibold text-3xl text-center text-black font-mono '><span className='underline'>TO</span> <span className='underline'>DO</span>  LIST</h1>
 
     <div  className="rounded-md shadow-xl lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-4 p-2 mt-7 border font-[popins]  ">
