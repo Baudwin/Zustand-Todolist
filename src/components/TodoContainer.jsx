@@ -25,7 +25,7 @@ export default function TodoContainer() {
     }
 
     const handleClick = ()=>{
-        if (task.content === "") {
+        if ((task.content).trim() === "") {
          return  alert("task content cannot be empty")
         }
         addTask(task)
@@ -60,7 +60,7 @@ export default function TodoContainer() {
     }
 
     const update = ()=>{
-        if (task.content === "") {
+        if ((task.content).trim() === "") {
             return  alert("task content cannot be empty")
            }
         updateTask(taskID, task)
@@ -79,7 +79,7 @@ export default function TodoContainer() {
     <div  className=" lg:w-1/2 xl:w-1/2 md:w-1/2 m-auto space-y-4 p-1 mt-7 font-[popins]  ">
 
         <div className='space-y-2 p-2'>
-        <input  value={task.content} onChange={handleChange} className='border-b-2 rounded-lg shadow-sm w-full p-4 focus:outline-none' type="text" placeholder='what would you like to add? ' name="content" id="" />
+        <input required  value={task.content} onChange={handleChange} className='border-b-2 rounded-lg shadow-sm w-full p-4 focus:outline-none' type="text" placeholder='what would you like to add? ' name="content" id="" />
         <input hidden value={task.status} className='' onChange={handleChange}  type="text" name="status" id="" />
         <input hidden value={task.date} className='' onChange={handleChange}  type="text" name="date" id="" />
 
